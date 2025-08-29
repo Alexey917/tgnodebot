@@ -2,7 +2,7 @@ import TelegramBot  from 'node-telegram-bot-api';
 
 const token = '8265097774:AAEyyS4224GsDNFYMC1XXPbbQkvvzvrzCzg';
 
-const webAppUrl = 'https://neon-kleicha-d781f9.netlify.app/front'
+const webAppUrl = 'https://monumental-douhua-4b9af1.netlify.app'
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
