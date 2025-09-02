@@ -20,7 +20,17 @@ const Form = () => {
   }
 
   useEffect(() => {
-    tg.MainButton.setParams({text: 'Отправить данные'})
+    tg.MainButton.setParams({
+      text: 'Отправить данные',
+      color: '#6f42c1'
+    })}, [tg])
+
+  useEffect(() => {
+    if(!street || !country) {
+      tg.MainButton.hide()
+    } else {
+      tg.MainButton.show()
+    }
   }, [])
 
 
