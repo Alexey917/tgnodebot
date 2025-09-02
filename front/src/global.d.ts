@@ -15,6 +15,9 @@ declare global {
         };
         ready(): void;
         close(): void;
+        onEvent(eventType: string, callback: () => void): void;
+        offEvent(eventType: string, callback: () => void): void;
+        sendData(data: string): void;
         showAlert(message: string): void;
 
         MainButton: {
