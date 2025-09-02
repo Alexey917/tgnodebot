@@ -16,7 +16,7 @@ bot.on('message', async(msg: TelegramBot.Message) => {
   const text = msg.text;
 
   if (text === '/start') {
-    await bot.sendMessage(chatId, 'Ниже появится кнопка для заполнения формы', {
+    await bot.sendMessage(chatId, 'Ниже появится кнопка для перехода на сайт', {
       reply_markup: {
         inline_keyboard: [
           [{text: 'Сайт', web_app: {url: webAppUrl}}]
@@ -24,7 +24,7 @@ bot.on('message', async(msg: TelegramBot.Message) => {
       }
     })
 
-    await bot.sendMessage(chatId, '', {
+    await bot.sendMessage(chatId, 'Ниже появится кнопка для заполнения формы', {
       reply_markup: {
         keyboard: [
           [{text: 'Форма', web_app: {url: webAppUrl + '/form'}}]
