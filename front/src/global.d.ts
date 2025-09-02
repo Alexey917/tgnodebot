@@ -24,6 +24,7 @@ declare global {
           isVisible: boolean;
           isActive: boolean;
           isProgressVisible: boolean;
+          setParams(params: MainButtonParams): void;
           setText(text: string): void;
           show(): void;
           hide(): void;
@@ -37,6 +38,14 @@ declare global {
     };
     
   }
+}
+
+interface MainButtonParams {
+  text?: string;
+  color?: string;
+  text_color?: string;
+  is_active?: boolean;
+  is_visible?: boolean;
 }
 
 export {};
