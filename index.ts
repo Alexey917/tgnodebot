@@ -19,9 +19,15 @@ bot.on('message', async(msg: TelegramBot.Message) => {
     await bot.sendMessage(chatId, 'Ниже появится кнопка для заполнения формы', {
       reply_markup: {
         inline_keyboard: [
-          [{text: 'Заполнить форму', web_app: {url: webAppUrl}}]
+          [{text: 'Сайт', web_app: {url: webAppUrl}}]
+        ],
+
+        keyboard: [
+          [{text: 'Форма', web_app: {url: webAppUrl + '/form'}}]
         ]
       }
+
+      
     })
   }
 
