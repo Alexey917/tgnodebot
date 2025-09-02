@@ -21,7 +21,11 @@ bot.on('message', async(msg: TelegramBot.Message) => {
         inline_keyboard: [
           [{text: 'Сайт', web_app: {url: webAppUrl}}]
         ],
+      }
+    })
 
+    await bot.sendMessage(chatId, '', {
+      reply_markup: {
         keyboard: [
           [{text: 'Форма', web_app: {url: webAppUrl + '/form'}}]
         ]
