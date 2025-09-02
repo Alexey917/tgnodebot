@@ -16,9 +16,26 @@ declare global {
         ready(): void;
         close(): void;
         showAlert(message: string): void;
+
+        MainButton: {
+          text: string;
+          color: string;
+          textColor: string;
+          isVisible: boolean;
+          isActive: boolean;
+          isProgressVisible: boolean;
+          setText(text: string): void;
+          show(): void;
+          hide(): void;
+          enable(): void;
+          disable(): void;
+          onClick(callback: () => void): void;
+          offClick(callback: () => void): void;
+        };
         // Добавьте другие методы по необходимости
       };
     };
+    
   }
 }
 

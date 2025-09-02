@@ -7,7 +7,7 @@ import { useTelegram } from './hooks/useTelegram'
 
 
 function App() {
-  const { tg, onClose } = useTelegram();
+  const { tg, onClose, user, onToggleButton } = useTelegram();
 
   useEffect(() => {
     tg.ready()
@@ -16,7 +16,8 @@ function App() {
   return (
     <div>
       <Button onClick={onClose}>Закрыть</Button>
-      <span style={{color: 'white'}}>{tg.initDataUnsafe?.user?.username}</span>
+      <Button onClick={onToggleButton}>Закрыть</Button>
+      <span style={{color: 'white'}}>{user}</span>
     </div>
   )
 }
