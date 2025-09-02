@@ -20,11 +20,17 @@ const Form = () => {
   }
 
   useEffect(() => {
-    tg.MainButton.setParams({
-      text: 'Отправить данные',
-      color: '#6f42c1'
-    })
-    tg.MainButton.hide();
+    try {
+      tg.MainButton.setParams({
+        text: 'Отправить данные',
+        color: '#0088cc'
+      })
+
+      tg.MainButton.hide();
+    } catch (e) {
+      console.log(e)
+    }
+    
   }, [])
 
   useEffect(() => {
