@@ -23,10 +23,9 @@ const Form = () => {
     try {
       tg.MainButton.setParams({
         text: 'Отправить данные',
-        color: '#0088cc'
+        color: '#6f42c1'
       })
 
-      tg.MainButton.hide();
     } catch (e) {
       console.log(e)
     }
